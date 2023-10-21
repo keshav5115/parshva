@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2" cellpadding="5px" cellspacing="0">
+        <tr>
+            <th>Name</th>
+            <th>start time</th>
+            <th>end time </th>
+            <th>hours</th>
+            <th>Rate per hour </th>
+            <th>supplier</th>
+            <th>PO number</th>
+            <th>description</th>
+        </tr>
+        {% for data in queryset %}
+        <tr>
+            <td>{{data.name}}</td>
+            <td>{{data.start_time}}</td>
+            <td>{{data.end_time}}</td>
+            <td>{{data.hours}}</td>
+            <td>{{data.rate}}</td>
+            <td>{{data.supplier}}</td>
+            <td>{{data.po_number}}</td>
+            <td>{{data.description}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
